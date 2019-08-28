@@ -1,0 +1,203 @@
+{% extends "main/layout_reg.html"%}
+{% block content %}
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <span class="subheading">Welcome</span>
+            <h2 class="mb-4">Sign Up</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+          </div>
+        </div>
+
+        <div class="row block-9">
+          <div class="col-md-7 order-md-last d-flex">
+            <form method="POST" action="" class="bg-light p-4 p-md-5 contact-form" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Join Today</legend>
+                <div class="form-group">
+                    {{ form.title.label(class="form-control-label") }}
+
+                    {% if form.title.errors %}
+                        {{ form.title(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.title.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.title(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.full_name.label(class="form-control-label") }}
+
+                    {% if form.full_name.errors %}
+                        {{ form.full_name(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.full_name.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.full_name(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.username.label(class="form-control-label") }}
+
+                    {% if form.username.errors %}
+                        {{ form.username(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.username.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.username(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.email.label(class="form-control-label") }}
+                    {% if form.email.errors %}
+                        {{ form.email(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.email(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.dob.label(class="form-control-label") }}
+
+                    {% if form.dob.errors %}
+                        {{ form.dob(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.dob.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.dob(class="form-control", type='Date') }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.church.label(class="form-control-label") }}
+
+                    {% if form.church.errors %}
+                        {{ form.church(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.church.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.church(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.picture.label(class="form-control-label") }}
+
+                    {% if form.picture.errors %}
+                        {{ form.picture(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.picture.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.picture(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.password.label(class="form-control-label") }}
+                    {% if form.password.errors %}
+                        {{ form.password(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.password(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.confirm_password.label(class="form-control-label") }}
+                    {% if form.confirm_password.errors %}
+                        {{ form.confirm_password(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.confirm_password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.confirm_password(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-primary py-3 px-5") }}
+            </div>
+        </form>
+          
+
+          </div>
+
+          <div class="col-md-5 d-flex">
+          	<div class="row d-flex contact-info mb-5">
+		          <div class="col-md-12 ftco-animate">
+		          	<div class="box p-2 px-3 bg-light d-flex">
+		          		<div class="icon mr-3">
+		          			<span class="icon-map-signs"></span>
+		          		</div>
+		          		<div>
+			          		<h3 class="mb-3">Address</h3>
+				            <p>S.D.A Basic School, Zongo, Goaso</p>
+			            </div>
+			          </div>
+		          </div>
+		          <div class="col-md-12 ftco-animate">
+		          	<div class="box p-2 px-3 bg-light d-flex">
+		          		<div class="icon mr-3">
+		          			<span class="icon-phone2"></span>
+		          		</div>
+		          		<div>
+			          		<h3 class="mb-3">Contact Number</h3>
+				            <p><a href="tel://1234567920">+ 1235 2355 98</a></p>
+			            </div>
+			          </div>
+		          </div>
+		          <div class="col-md-12 ftco-animate">
+		          	<div class="box p-2 px-3 bg-light d-flex">
+		          		<div class="icon mr-3">
+		          			<span class="icon-paper-plane"></span>
+		          		</div>
+		          		<div>
+			          		<h3 class="mb-3">Email Address</h3>
+				            <p><a href="mailto:info@yoursite.com">greenview@omsday.com</a></p>
+			            </div>
+			          </div>
+		          </div>
+		          <div class="col-md-12 ftco-animate">
+		          	<div class="box p-2 px-3 bg-light d-flex">
+		          		<div class="icon mr-3">
+		          			<span class="icon-globe"></span>
+		          		</div>
+		          		<div>
+			          		<h3 class="mb-3">Website</h3>
+				            <p><a href="#">yoursite.com</a></p>
+			            </div>
+			          </div>
+		          </div>
+		        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock content %}
