@@ -102,7 +102,7 @@
         <div class="row block-9">
           <div class="col-md-7 order-md-last d-flex">
             <form method="POST" action="" class="bg-light p-4 p-md-5 contact-form" enctype="multipart/form-data">
-            <input id="csrf_token" name="csrf_token" type="hidden" value="ImRjNzhmMTFmNGVlNTE1OTRmZGVhZTk1MDRiNjA4ZjI0Y2E1MGNjZWMi.XWaJjg.h84urKDGAncxylvmwhi0A9JgPXo">
+            <input id="csrf_token" name="csrf_token" type="hidden" value="ImJiM2Q4ZWMyNWMzNjk2MTJjYmYwMTEzZmM5NWM0ZWE1Mzg2MGQyZWQi.XWaSog.QcL5CwEzXVUyBGdnEius_vKf5Kc">
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4">Join Today</legend>
                
